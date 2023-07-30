@@ -28,7 +28,7 @@
       </div>
 
       <!-- This is Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light position-relative">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">The Coffe House</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -230,7 +230,8 @@
                 <a class="nav-link disabled" href="#" tabindex="-1"
                   aria-disabled="true">Tuyển dụng</a>
               </li>
-
+              <div id="cart" style="position: absolute; top: 100px; right: 100px; background-color: #ffffff;">
+              </div>
             </nav>
           </div>
 
@@ -281,18 +282,18 @@
 
           <!-- This is list card -->
           <div class="container">
-            <div class="row item row-cols-1 row-cols-md-3 g-4">
+            <div class="row item row-cols-1 row-cols-md-3 g-4 w-100">
               <div class="w-200">
                 <div class="card h-100">
                   <img
-                    src="https://file.hstatic.net/1000075078/file/banner_app_2_c3dea7cad7cb4fad94f162ea6ccd388b.jpg"
+                    src="./assets/banner.png"
                     class="greentea" alt="..." />
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style="cursor: pointer;" onclick='addToCart("cloudfee", "CloudFee Hạnh Nhân Nướng", 49, "./assets/6.png", 1)'>
                   <img
-                    src="//product.hstatic.net/1000075078/product/1675357918_cloudfee-hanh-nhan-nuong-min_6a6523b919b84d9ca4f940a188b26900_large.png"
+                    src="./assets/6.png"
                     class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">CloudFee Hạnh Nhân Nướng</h5>
@@ -301,9 +302,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style="cursor: pointer;" onclick='addToCart("trada", "The Coffee House Sữa Đá", 39, "./assets/1.png", 1)'>
                   <img
-                    src="//product.hstatic.net/1000075078/product/1675355354_bg-tch-sua-da-no_cc9674d289b846a8a85b5fe84f2b239b_large.jpg"
+                    src="./assets/1.jpg"
                     class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">The Coffee House Sữa Đá</h5>
@@ -312,9 +313,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style="cursor: pointer;" onclick='addToCart("tea", "Hi-Tea Vải", 49, "./assets/2.png", 1)'>
                   <img
-                    src="//product.hstatic.net/1000075078/product/1669736893_hi-tea-vai_590486da544643bd8ac251cf67fdbae4_large.png"
+                    src="./assets/2.jpg"
                     class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Hi-Tea Vải</h5>
@@ -323,9 +324,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style="cursor: pointer;" onclick='addToCart("cafe", "Cà Phê Sữa Đá", 29, "./assets/3.png", 1)'>
                   <img
-                    src="//product.hstatic.net/1000075078/product/1669736835_ca-phe-sua-da_55554d6e112e408fa04905d664dfa9e6_large.png"
+                    src="./assets/3.jpg"
                     class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Cà Phê Sữa Đá</h5>
@@ -334,9 +335,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style="cursor: pointer;" onclick='addToCart("banhmi", "Bánh mì VN thịt nguội", 35, "./assets/4.png", 1)'>
                   <img
-                    src="//product.hstatic.net/1000075078/product/1669736835_ca-phe-sua-da_55554d6e112e408fa04905d664dfa9e6_large.png"
+                    src="./assets/4.jpg"
                     class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Bánh mì VN thịt nguội</h5>
@@ -345,9 +346,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style="cursor: pointer;" onclick='addToCart("mochi", "Mochi Kem Chocolate", 19, "./assets/5.png", 1)'>
                   <img
-                    src="//product.hstatic.net/1000075078/product/1655348107_mochi-choco_f6e63c0efa704e11990791f9fdd88214_large.jpg"
+                    src="./assets/5.jpg"
                     class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Mochi Kem Chocolate</h5>
@@ -363,15 +364,6 @@
 
             </div>
           </div>
-        </div>
-        <script
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-          integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-          crossorigin="anonymous"></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-          crossorigin="anonymous"></script>
 
         <!-- Coffe view -->
         <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -412,7 +404,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div> -->
-
+  </div>
 
 
 
@@ -420,7 +412,7 @@
 
         <!-- Chuyện nhà  -->
         <h4>#Chuyện nhà</h4><br>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- <div class="row row-cols-1 row-cols-md-3 g-4 w-100">
           <div class="col">
             <div class="card h-100">
               <img
@@ -481,7 +473,17 @@
                 <h5 class="card-title">  “KHUẤY ĐỂ THẤY TRĂNG" - KHUẤY LÊN...</h5>
                 <p class="card-text">Năm 2022 là năm đề cao sức khỏe tinh thần nên giới trẻ muốn tận hưởng một Trung thu với nhiều trải nghiệm mới mẻ, rôm rả cùng bạn bè....</p>
               </div>
-            </div> -->     
-
+            </div>  
+          </div> 
+          </div>  -->
           </body>
+          <script src="./app.js"></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
         </html>
